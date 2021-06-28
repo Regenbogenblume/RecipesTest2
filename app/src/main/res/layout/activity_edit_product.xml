@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProductActivity">
+
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/_16sdp"
+        />
+
+    <TextView
+        android:id="@+id/tvProductId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        android:layout_margin="@dimen/_16sdp"
+        />
+
+    <EditText
+        android:id="@+id/etProductName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text|textAutoCorrect"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:gravity="start"
+        android:hint="Product Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProductId"
+        android:layout_margin="@dimen/_16sdp"
+        />
+
+    <EditText
+        android:id="@+id/etProductCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/_16sdp"
+        android:inputType="text|textAutoCorrect"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:gravity="start"
+        android:hint="Product Category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnDeleteProductCategory"
+        app:layout_constraintTop_toBottomOf="@id/etProductName"
+        android:layout_marginVertical="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDeleteProductCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        app:iconPadding="0dp"
+        app:icon="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@id/etProductCategory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/etProductCategory"
+        android:layout_marginRight="@dimen/_16sdp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        />
+
+
+    <EditText
+        android:id="@+id/etProductSearchTerms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/_16sdp"
+        android:inputType="text|textAutoCorrect"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:gravity="start"
+        android:hint="Product Search Terms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etProductCategory"
+        android:layout_margin ="@dimen/_16sdp"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSaveProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etProductSearchTerms"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginVertical="@dimen/_24sdp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDeleteProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        app:layout_constraintStart_toEndOf="@id/btnSaveProduct"
+        app:layout_constraintTop_toTopOf="@id/btnSaveProduct"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
